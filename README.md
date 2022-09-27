@@ -1,5 +1,5 @@
 # Robust Reinforcement Learning using Offline Data
-Implementation of the algorithm Robust Fitted Q-Iteration (RFQI). RFQI is introduced in our paper [Robust Reinforcement Learning using Offline Data](https://arxiv.org/abs/2208.05129).
+Implementation of the algorithm Robust Fitted Q-Iteration (RFQI). RFQI is introduced in our paper [Robust Reinforcement Learning using Offline Data](https://arxiv.org/abs/2208.05129). This implementation of RFQI is based on the implementation of [BCQ](https://github.com/sfujim/BCQ) and the implementation of [PQL](https://github.com/yaoliucs/PQL).
 
 Our method is tested in OpenAI gym discrete control task, [CartPole](https://www.gymlibrary.ml/environments/classic_control/cart_pole/), and two [MuJoCo](http://www.mujoco.org/) continuous control tasks, Hopper and HalfCheetah, using the [D4RL](https://github.com/rail-berkeley/d4rl) benchmark. **Thus it is required that MuJoCo and D4RL are both installed prior to using this repo**.
 
