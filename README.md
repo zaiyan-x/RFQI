@@ -1,5 +1,5 @@
 # Robust Reinforcement Learning using Offline Data
-Implementation of the algorithm Robust Fitted Q-Iteration (RFQI). RFQI is introduced in our paper [Robust Reinforcement Learning using Offline Data](https://arxiv.org/abs/2208.05129). This implementation of RFQI is based on the implementation of [BCQ](https://github.com/sfujim/BCQ) and the implementation of [PQL](https://github.com/yaoliucs/PQL).
+Implementation of the algorithm Robust Fitted Q-Iteration (RFQI). RFQI is introduced in our paper [Robust Reinforcement Learning using Offline Data](https://arxiv.org/abs/2208.05129) (NeurIPS'22). This implementation of RFQI is based on the implementation of [BCQ](https://github.com/sfujim/BCQ) and the implementation of [PQL](https://github.com/yaoliucs/PQL).
 
 Our method is tested in OpenAI gym discrete control task, [CartPole](https://www.gymlibrary.ml/environments/classic_control/cart_pole/), and two [MuJoCo](http://www.mujoco.org/) continuous control tasks, Hopper and HalfCheetah, using the [D4RL](https://github.com/rail-berkeley/d4rl) benchmark. **Thus it is required that MuJoCo and D4RL are both installed prior to using this repo**.
 
@@ -8,7 +8,7 @@ Install requirements:
 ```
 pip install -r requirements.txt
 ```
-Next, you need to properly register the perturbed Gym environments which are placed under the folder perturbed_env. A recommended way to do this: first, place cartpole_perturbed.py under gym/envs/classic_control, hopper_perturbed.py and half_cheetah_perturbed.py under gym/envs/mujoco. Then add the following to \__init__.py unde gym/envs:
+Next, you need to properly register the perturbed Gym environments which are placed under the folder perturbed_env. A recommended way to do this: first, place cartpole_perturbed.py under gym/envs/classic_control, hopper_perturbed.py and half_cheetah_perturbed.py under gym/envs/mujoco. Then add the following to \__init__.py under gym/envs:
 ```
 register(
     id="CartPolePerturbed-v0",
