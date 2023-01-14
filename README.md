@@ -18,7 +18,7 @@ register(
 )
 register(
     id="HopperPerturbed-v3",
-    entry_point="gym.envs.mujoco.hopper_preturbed:HopperPerturbedEnv",
+    entry_point="gym.envs.mujoco.hopper_perturbed:HopperPerturbedEnv",
     max_episode_steps=1000,
     reward_threshold=3800.0,
 )
