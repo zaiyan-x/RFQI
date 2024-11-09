@@ -39,6 +39,12 @@ After installing MuJoCo and D4RL, you can run the following script to download D
 ```
 python load_d4rl_data.py
 ```
+
+# Training and Testing of MuJoCo Infographics: Robust MuJoCo Gym
+![Robust MuJoCo Gym](https://github.com/user-attachments/assets/f867b467-ea43-4342-98ed-5ac25c498693)
+
+The nominal stochastic probability transition model on which we train our policies is the vanilla MuJoCo setup inducing transition stochasticity using traditional action randomizations from [BCQ](https://github.com/sfujim/BCQ) and [PQL](https://github.com/yaoliucs/PQL) implementations. Finally, we evaluate the trained policies deployed on physics-informed perturbed MuJoCo environments.
+
 ## TL;DR
 Here you can find shell scripts that take you directly from offline data generation to evaluation results.
 
@@ -66,13 +72,24 @@ To generate the mixed dataset specified in Appendix E.1, run the following:
 ```
 python generate_offline_data.py --env=Hopper-v3 --gendata_pol=sac --eps=0.3 --mixed=True
 ```
-To train a RFQI policy on `Hopper-v3` with `d4rl-hopper-medium-v0` and uncertainty hyperparameter `rho=0.5`, please run:
+To train an RFQI policy on `Hopper-v3` with `d4rl-hopper-medium-v0` and uncertainty hyperparameter `rho=0.5`, please run:
 ```
 python train_rfqi.py --env=Hopper-v3 --d4rl=True --rho=0.5
 ```
-You can also train a RFQI policy on `Hopper-v3` with mixed dataset and uncertainty hyperparameter `rho=0.5` by running
+You can also train an RFQI policy on `Hopper-v3` with mixed dataset and uncertainty hyperparameter `rho=0.5` by running
 ```
 python train_rfqi.py --env=Hopper-v3 --data_eps=0.3 --gendata_pol=sac --mixed=True --rho0.5
 ```
 ## Miscellaneous
 If you are using a remote machine to run this repo, please remember to assign a display/virtual display for the evaluation suite to properly generate gifs.
+
+## Citation
+Please consider citing our repository and paper if you find it useful in your research directions.
+```
+@article{panaganti-rfqi-2022,
+  title={Robust Reinforcement Learning using Offline Data},
+  author= {Panaganti, Kishan and Xu, Zaiyan and Kalathil, Dileep and Ghavamzadeh, Mohammad},
+  journal={Advances in Neural Information Processing Systems (NeurIPS)},
+  year={2022}
+}
+```
